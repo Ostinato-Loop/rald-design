@@ -280,6 +280,7 @@ export default function Components() {
               </div>
             </dialog>
           )}
+        </div>
 
       </section>
 
