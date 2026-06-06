@@ -1,0 +1,34 @@
+/* RALD Design System — Core Tokens */
+:root {
+  --bg: #050A0F; --surface: #080F17; --card: #0D1620; --overlay: #111D2A;
+  --text: #E8EDF3; --text-muted: #6B7A8D; --text-dim: #3A4A5C;
+  --border: #1A2535; --border-mid: #243040;
+  --loop: #00FF88; --messenger: #FF7A00; --payrald: #0066FF;
+  --raldtics: #FFD400; --dispatch: #00BFFF; --dunarald: #A855F7;
+  --gitrald: #FF2E2E; --voice: #FF4FAD; --identity: #00E5FF;
+  --success: #00FF88; --warning: #FFD400; --error: #FF2E2E; --info: #00BFFF;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px;
+  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-xl: 20px; --radius-full: 9999px;
+  --font-sans: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+  --text-xs: 11px; --text-sm: 13px; --text-base: 15px; --text-md: 16px;
+  --text-lg: 20px; --text-xl: 26px; --text-2xl: 32px; --text-3xl: 42px; --text-4xl: 56px;
+  --weight-normal: 400; --weight-medium: 500; --weight-semibold: 600; --weight-bold: 700; --weight-black: 900;
+  --leading-tight: 1.2; --leading-snug: 1.35; --leading-normal: 1.5; --leading-relaxed: 1.7;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4); --shadow-md: 0 4px 16px rgba(0,0,0,0.5); --shadow-lg: 0 8px 32px rgba(0,0,0,0.6);
+  --shadow-glow-green: 0 0 24px rgba(0,255,136,0.15); --shadow-glow-blue: 0 0 24px rgba(0,102,255,0.15);
+  --transition-fast: 80ms ease; --transition-base: 160ms ease; --transition-slow: 320ms ease;
+  --z-base: 0; --z-dropdown: 100; --z-overlay: 200; --z-modal: 300; --z-toast: 400;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: var(--text-base); line-height: var(--leading-normal); }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+code, pre { font-family: var(--font-mono); }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 3px; }
+:focus-visible { outline: 2px solid var(--identity); outline-offset: 2px; border-radius: var(--radius-sm); }
