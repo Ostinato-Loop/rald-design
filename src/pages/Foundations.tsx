@@ -36,8 +36,8 @@ function Swatch({ hex, name, token, usage, wcag }: { hex: string; name: string; 
   return (
     <button onClick={() => { void navigator.clipboard.writeText(hex); setCopied(true); setTimeout(() => setCopied(false), 1200); }}
       style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden", textAlign: "left", width: "100%", cursor: "pointer" }}
-      onMouseEnter={e => (e.currentTarget.style.borderColor = `${hex}50`)}
-      onMouseLeave={e => (e.currentTarget.style.borderColor = "var(--border)")}>
+      onMouseEnter={e => { e.currentTarget.style.borderColor = `${hex}50`; }}
+      onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; }}>
       <div style={{ height: 48, background: hex, position: "relative" }}>
         {copied && <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.5)", fontSize: 12, fontWeight: 700, color: "#fff" }}>Copied!</div>}
       </div>
