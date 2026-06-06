@@ -88,10 +88,11 @@ export default function AudioUX() {
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
             <span style={{ fontSize: 11, fontFamily: "var(--font-mono)", color: "var(--text-muted)", minWidth: 36 }}>1:23</span>
-            <div role="button" tabIndex={0} onClick={e => { const r = e.currentTarget.getBoundingClientRect(); setProgress(Math.round(((e.clientX - r.left) / r.width) * 100)); }} onKeyDown={e => { if (e.key === "Enter" || e.key === " ") { const r = e.currentTarget.getBoundingClientRect(); setProgress(Math.round((0.5) * 100)); } }} style={{ flex: 1, height: 6, background: "var(--card)", borderRadius: 3, cursor: "pointer", position: "relative" }}>
+            <button type="button" onClick={e => { const r = e.currentTarget.getBoundingClientRect(); setProgress(Math.round(((e.clientX - r.left) / r.width) * 100)); }} onKeyDown={e => { if (e.key === "Enter" || e.key === " ") { const r = e.currentTarget.getBoundingClientRect(); setProgress(Math.round((0.5) * 100)); } }} style={{ flex: 1, height: 6, background: "var(--card)", borderRadius: 3, cursor: "pointer", position: "relative", border: "none", padding: 0 }}>
               <div style={{ width: `${progress}%`, height: "100%", background: "#00FF88", borderRadius: 3 }} />
               <div style={{ position: "absolute", top: "50%", left: `${progress}%`, transform: "translate(-50%,-50%)", width: 14, height: 14, borderRadius: "50%", background: "#00FF88", border: "2px solid var(--bg)" }} />
-            </div>
+            </button>
+            
             <span style={{ fontSize: 11, fontFamily: "var(--font-mono)", color: "var(--text-muted)", minWidth: 36 }}>3:47</span>
             <button aria-label={playing ? "Pause" : "Play"} onClick={() => setPlaying(p => !p)} style={{ width: 40, height: 40, borderRadius: "50%", background: "#00FF88", border: "none", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, cursor: "pointer", color: "#050A0F" }}>{playing ? "⏸" : "▶"}</button>
           </div>
