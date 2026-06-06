@@ -262,10 +262,10 @@ export default function Patterns() {
           </div>
         </div>
         {savedToast && (
-          <div role="status" aria-live="polite" style={{ position: "fixed", bottom: 32, right: 32, zIndex: 400, background: "var(--overlay)", border: "1px solid var(--border-mid)", borderRadius: 12, padding: "14px 18px", boxShadow: "var(--shadow-lg)", display: "flex", alignItems: "center", gap: 12 }}>
+          <output aria-live="polite" style={{ position: "fixed", bottom: 32, right: 32, zIndex: 400, background: "var(--overlay)", border: "1px solid var(--border-mid)", borderRadius: 12, padding: "14px 18px", boxShadow: "var(--shadow-lg)", display: "flex", alignItems: "center", gap: 12 }}>
             <span style={{ color: "#00FF88", fontSize: 18 }}>✓</span>
             <div style={{ fontSize: 13, fontWeight: 700, color: "var(--text)" }}>Profile updated.</div>
-          </div>
+          </output>
         )}
       </section>
     </div>
