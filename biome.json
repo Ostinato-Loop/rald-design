@@ -1,0 +1,17 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "organizeImports": { "enabled": false },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": { "noExplicitAny": "warn", "noArrayIndexKey": "warn" },
+      "style": { "noNonNullAssertion": "warn", "useImportType": "off", "useTemplate": "warn" },
+      "correctness": { "noUnusedVariables": "warn", "noUnusedImports": "warn", "useExhaustiveDependencies": "warn" },
+      "complexity": { "noForEach": "warn" },
+      "a11y": { "noLabelWithoutControl": "off", "useButtonType": "off" }
+    }
+  },
+  "formatter": { "enabled": false },
+  "files": { "ignore": ["node_modules", "dist", ".wrangler", "*.lock", "public"] }
+}
