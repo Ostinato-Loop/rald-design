@@ -105,7 +105,7 @@ export default function Patterns() {
         <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 14, overflow: "hidden" }}>
           <div style={{ display: "flex", borderBottom: "1px solid var(--border)" }} role="tablist">
             {(["2fa", "sessions", "devices"] as const).map(t => (
-              <button key={t} role="tab" aria-selected={secTab === t} onClick={() => setSecTab(t)} style={{ padding: "12px 20px", fontSize: 13, fontWeight: secTab === t ? 700 : 400, color: secTab === t ? "#FFD400" : "var(--text-muted)", borderBottom: secTab === t ? "2px solid #FFD400" : "2px solid transparent", background: "none", cursor: "pointer", textTransform: "uppercase", letterSpacing: "0.05em", fontSize: 11, marginBottom: -1 }}>
+              <button key={t} role="tab" aria-selected={secTab === t} onClick={() => setSecTab(t)} style={{ padding: "12px 20px", fontWeight: secTab === t ? 700 : 400, color: secTab === t ? "#FFD400" : "var(--text-muted)", borderBottom: secTab === t ? "2px solid #FFD400" : "2px solid transparent", background: "none", cursor: "pointer", textTransform: "uppercase", letterSpacing: "0.05em", fontSize: 11, marginBottom: -1 }}>
                 {t === "2fa" ? "Two-Factor Auth" : t === "sessions" ? "Active Sessions" : "Trusted Devices"}
               </button>
             ))}
