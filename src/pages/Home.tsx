@@ -69,8 +69,8 @@ export default function Home() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 16, marginBottom: 56 }}>
         {SECTIONS.map(s => (
           <Link key={s.path} href={s.path} style={{ display: "block", padding: "22px 20px", background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 14, transition: "border-color var(--transition-base)" }}
-            onMouseEnter={e => (e.currentTarget.style.borderColor = `${s.color}50`)}
-            onMouseLeave={e => (e.currentTarget.style.borderColor = "var(--border)")}>
+            onMouseEnter={e => { e.currentTarget.style.borderColor = `${s.color}50`; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; }}>
             <div style={{ fontSize: 22, marginBottom: 10 }}>{s.icon}</div>
             <div style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", marginBottom: 6 }}>{s.label}</div>
             <div style={{ fontSize: 12, color: "var(--text-muted)", lineHeight: 1.5 }}>{s.desc}</div>
@@ -116,7 +116,7 @@ export default function Home() {
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, color: "#00E5FF", marginBottom: 8 }}>CSS Tokens</div>
             <code style={{ fontSize: 11, fontFamily: "var(--font-mono)", color: "var(--text-muted)", display: "block", lineHeight: 1.8 }}>
-              {`/* Copy tokens.css from rald-design-system */\n/* Use variables — never hardcode */\nbackground: var(--surface); ✅\nbackground: #080F17;         ✕`}
+              {"/* Copy tokens.css from rald-design-system */\n/* Use variables — never hardcode */\nbackground: var(--surface); ✅\nbackground: #080F17;         ✕"}
             </code>
           </div>
           <div>
