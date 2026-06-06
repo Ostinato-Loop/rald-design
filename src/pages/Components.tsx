@@ -65,9 +65,7 @@ export default function Components() {
               <div style={{ fontSize: 11, color: "#00FF88", marginTop: 5 }}>✓ Email verified</div>
             </div>
             <label style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }}>
-              <div role="checkbox" aria-checked={checked} tabIndex={0} onClick={() => setChecked(c => !c)} onKeyDown={e => { if (e.key === "Enter" || e.key === " ") setChecked(c => !c); }} style={{ width: 20, height: 20, borderRadius: 5, border: `2px solid ${checked ? "#00FF88" : "var(--border)"}`, background: checked ? "#00FF88" : "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", transition: "all var(--transition-base)" }}>
-                {checked && <span style={{ color: "#050A0F", fontSize: 12, fontWeight: 900 }}>✓</span>}
-              </div>
+              <input type="checkbox" checked={checked} onChange={e => setChecked(e.target.checked)} style={{ width: 20, height: 20, accentColor: "#00FF88", cursor: "pointer" }} />
               <span style={{ fontSize: 14, color: "var(--text)" }}>Enable notifications</span>
             </label>
           </div>
@@ -269,7 +267,7 @@ export default function Components() {
         <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 12, padding: 24 }}>
           <button onClick={() => setModalOpen(true)} style={{ padding: "10px 20px", borderRadius: 8, fontWeight: 700, fontSize: 14, background: "var(--surface)", color: "var(--text)", border: "1px solid var(--border)", cursor: "pointer" }}>Open modal</button>
           {modalOpen && (
-            <dialog open aria-labelledby="modal-title" style={{ position: "fixed", inset: 0, background: "rgba(5,10,15,0.85)", zIndex: 300, display: "flex", alignItems: "center", justifyContent: "center" }} onClick={() => setModalOpen(false)}>
+            <dialog open aria-labelledby="modal-title" style={{ position: "fixed", inset: 0, background: "rgba(5,10,15,0.85)", zIndex: 300, display: "flex", alignItems: "center", justifyContent: "center" }} onClick={() => setModalOpen(false)} onKeyDown={e => { if (e.key === "Escape") setModalOpen(false); }}>
               <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 18, padding: 32, width: 400, maxWidth: "90vw", boxShadow: "var(--shadow-lg)" }} onClick={e => e.stopPropagation()} onKeyDown={e => e.stopPropagation()}>
                 <div id="modal-title" style={{ fontSize: 20, fontWeight: 900, color: "var(--text)", marginBottom: 10 }}>Confirm action</div>
                 <div style={{ fontSize: 14, color: "var(--text-muted)", marginBottom: 28, lineHeight: 1.6 }}>This action cannot be undone. Are you sure you want to continue?</div>
