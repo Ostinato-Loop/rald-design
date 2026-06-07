@@ -17,7 +17,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
       - run: npm install
       - run: npm run build
       - name: Deploy to Cloudflare Pages
@@ -29,10 +28,10 @@ jobs:
           projectName: rald-design
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy status
+      - name: Deploy status note
         run: |
-          echo "ℹ️  Cloudflare Pages deploy step ran (continue-on-error)."
-          echo "   If it failed, create the Pages project in the dashboard first:"
-          echo "   Pages → New project → Connect rald-design → build: npm run build → dist"
+          echo "ℹ️  Pages deploy ran with continue-on-error."
+          echo "   Create the Cloudflare Pages project in the dashboard to activate:"
+          echo "   Pages → New project → rald-design → build: npm run build → dist"
           echo "   Custom domain: design.rald.cloud"
 
